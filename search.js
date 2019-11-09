@@ -35,6 +35,7 @@ $.ajax({
   method: "GET"
 }).then(function(response) {
     console.log(response);
-    console.log(response.response.docs[0])
-    console.log(response.response.docs[0])
+    var article = $("<div>");
+    article = response.response.docs[0];
+    $('.card-body').append(JSON.stringify(article));
 })
